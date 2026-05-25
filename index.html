@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraPulse - Ultimate AI Fitness & Diet Architect</title>
+  
+  <!-- SEO Best Practices -->
+  <meta name="description" content="AuraPulse is an advanced, commercial-grade AI Fitness and Diet Planning system tailored for mechanical tension, progressive overload, and custom macro-optimized nutrition.">
+  <meta name="keywords" content="AI fitness planner, AI meal generator, workout rest timer, ectomorph workout, vegetarian bodybuilding plan, Gond Katira, Soya chunks protein">
+  <meta name="author" content="AuraPulse Technology Group">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo" id="brand-logo">
+        <div class="logo-icon">⚡</div>
+        <span class="text-gradient">AuraPulse</span>
+      </a>
+      
+      <nav class="nav-tabs">
+        <button class="tab-btn active" data-tab="tab-planner">
+          <span>🎯</span> Planner & Tracker
+        </button>
+        <button class="tab-btn" data-tab="tab-advisor">
+          <span>💬</span> AI Advisor Chat
+        </button>
+        <button class="tab-btn" data-tab="tab-earning">
+          <span>💎</span> Premium & Earning
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN APP WRAPPER
+       ========================================================================== -->
+  <main>
+
+    <!-- ==========================================================================
+         SECTION 1: PLANNER & WIZARD
+         ========================================================================== -->
+    <section id="tab-planner" class="content-section active">
+      
+      <!-- ONBOARDING WIZARD SCREEN -->
+      <div id="wizard-screen" class="wizard-container glass-card">
+        <div class="wizard-header">
+          <h2>Synthesize Your <span class="text-gradient">Elite Custom Plan</span></h2>
+          <p>Backed by sports science and tailored to your specific dietary availability.</p>
+        </div>
+        
+        <!-- Progress Steps indicator -->
+        <div class="steps-indicator">
+          <div class="step-indicator-item active">1</div>
+          <div class="step-indicator-item">2</div>
+          <div class="step-indicator-item">3</div>
+        </div>
+        
+        <!-- STEP 1: BIOMETRICS -->
+        <div class="wizard-step active" id="step-1">
+          <h3 style="margin-bottom:20px;">🔬 Step 1: Tell Us About Your Biometrics</h3>
+          
+          <div class="input-grid">
+            <div class="input-group">
+              <label for="input-age">Your Age (Years)</label>
+              <input type="number" id="input-age" value="19" min="12" max="100">
+            </div>
+            <div class="input-group">
+              <label for="input-gender">Biological Gender</label>
+              <select id="input-gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="input-height">Height (cm)</label>
+              <input type="number" id="input-height" value="180" min="100" max="250">
+            </div>
+            <div class="input-group">
+              <label for="input-weight">Current Weight (kg)</label>
+              <input type="number" id="input-weight" value="57" min="30" max="250">
+            </div>
+          </div>
+          
+          <h3 style="margin-top:30px; margin-bottom:16px;">🎯 Choose Your High-Yield Fitness Goal</h3>
+          <div class="choices-grid">
+            <div class="choice-card selected" data-group="goal" data-value="clean-bulk">
+              <div class="choice-icon">📈</div>
+              <div class="choice-title">Clean Bulk</div>
+              <div class="choice-desc">Steady muscle gains with low body fat.</div>
+            </div>
+            <div class="choice-card" data-group="goal" data-value="shred">
+              <div class="choice-icon">⚡</div>
+              <div class="choice-title">Shred / Lean</div>
+              <div class="choice-desc">Burn fat, reveal aesthetic muscle splits.</div>
+            </div>
+            <div class="choice-card" data-group="goal" data-value="athletic">
+              <div class="choice-icon">⚔️</div>
+              <div class="choice-title">Athletic Power</div>
+              <div class="choice-desc">Explosive agility, strength, & core stabilization.</div>
+            </div>
+          </div>
+          
+          <div class="wizard-actions">
+            <div></div> <!-- Spacer -->
+            <button class="btn-primary btn-next-step">Next Step ➜</button>
+          </div>
+        </div>
+        
+        <!-- STEP 2: TRAINING TYPE -->
+        <div class="wizard-step" id="step-2">
+          <h3 style="margin-bottom:16px;">🏋️ Step 2: Configure Your Training System</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:24px;">Your selection decides the exercise progressions generated.</p>
+          
+          <div class="choices-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="choice-card selected" data-group="equipment" data-value="bodyweight">
+              <div class="choice-icon">🧘</div>
+              <div class="choice-title">Bodyweight Rows / Calisthenics</div>
+              <div class="choice-desc">Leverages bodyweight & high time-under-tension.</div>
+            </div>
+            <div class="choice-card" data-group="equipment" data-value="gym">
+              <div class="choice-icon">🏛️</div>
+              <div class="choice-title">Commercial Gym Split</div>
+              <div class="choice-desc">Leverages barbells, cables, & heavy load compound tension.</div>
+            </div>
+            <div class="choice-card" data-group="equipment" data-value="dumbbells">
+              <div class="choice-icon">💪</div>
+              <div class="choice-title">Dumbbells Only</div>
+              <div class="choice-desc">Optimal home hypertrophy using free-weights.</div>
+            </div>
+          </div>
+          
+          <h3 style="margin-top:30px; margin-bottom:16px;">🗓️ Training Frequency Selection</h3>
+          <div class="choices-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="choice-card" data-group="frequency" data-value="3">
+              <div class="choice-title">3 Days / Wk</div>
+              <div class="choice-desc">Full Body splits</div>
+            </div>
+            <div class="choice-card selected" data-group="frequency" data-value="4">
+              <div class="choice-title">4 Days / Wk</div>
+              <div class="choice-desc">Push / Pull schedules</div>
+            </div>
+            <div class="choice-card" data-group="frequency" data-value="5">
+              <div class="choice-title">5 Days / Wk</div>
+              <div class="choice-desc">Bro-split / Hypertrophy</div>
+            </div>
+            <div class="choice-card" data-group="frequency" data-value="6">
+              <div class="choice-title">6 Days / Wk</div>
+              <div class="choice-desc">Push/Pull/Legs cycle</div>
+            </div>
+          </div>
+          
+          <div class="wizard-actions">
+            <button class="btn-secondary btn-prev-step">Back</button>
+            <button class="btn-primary btn-next-step">Next Step ➜</button>
+          </div>
+        </div>
+        
+        <!-- STEP 3: NUTRITIONAL PROFILE -->
+        <div class="wizard-step" id="step-3">
+          <h3 style="margin-bottom:16px;">🥗 Step 3: Optimize Your Dietary Lifestyle</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:24px;">Tailored specifically to your dietary access and gut profile.</p>
+          
+          <div class="choices-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="choice-card selected" data-group="lifestyle" data-value="vegetarian">
+              <div class="choice-icon">🌱</div>
+              <div class="choice-title">Vegetarian (Premium)</div>
+              <div class="choice-desc">Optimized using Soya chunks, curd, kala chana, oats, & Gond Katira.</div>
+            </div>
+            <div class="choice-card" data-group="lifestyle" data-value="vegan">
+              <div class="choice-icon">🍏</div>
+              <div class="choice-title">100% Plant-Based / Vegan</div>
+              <div class="choice-desc">Macro balance via legumes, nuts, tempeh & plant protein.</div>
+            </div>
+            <div class="choice-card" data-group="lifestyle" data-value="balanced">
+              <div class="choice-icon">🥚</div>
+              <div class="choice-title">Balanced Omnivore</div>
+              <div class="choice-desc">Standard sports diet combining dairy, eggs & grains.</div>
+            </div>
+          </div>
+          
+          <div class="wizard-actions">
+            <button class="btn-secondary btn-prev-step">Back</button>
+            <button class="btn-primary" id="btn-generate">
+              ⚡ Synthesize AI Plan
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PROCESS LOADER LOADING TRANSITION -->
+      <div id="loading-screen" class="wizard-container glass-card loading-overlay">
+        <div class="spinner-ring"></div>
+        <h3 style="margin-bottom:14px;">AuraPulse AI Synthesis Engine</h3>
+        <p style="color:var(--text-muted); margin-bottom:24px; font-size:0.95rem;">Compiling metabolic formulas and hyper-trophy progressions...</p>
+        
+        <!-- Dynamic Code Logs -->
+        <div class="loading-tasks" id="loading-logs">
+          <!-- Populated in Javascript -->
+        </div>
+      </div>
+      
+      <!-- MAIN TRACKING DASHBOARD (Initially Hidden) -->
+      <div id="dashboard-screen" style="display:none; animation: fadeIn 0.4s ease forwards;">
+        
+        <!-- Top Banner: Dynamic Calories targets summary -->
+        <div class="dashboard-banner glass-card" style="margin-bottom:30px; border-radius: var(--radius-lg);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <div>
+              <span class="affiliate-badge" style="background:rgba(99, 102, 241, 0.15); border-color:var(--primary); margin-bottom:8px;">Bio-Metric Calibrated</span>
+              <h2 style="font-size:2rem; font-family:'Outfit';">Your Daily Aesthetic Target Dashboard</h2>
+              <p style="color:var(--text-muted); font-size:0.9rem;">Ectomorph Muscle Gain Protocol is active.</p>
+            </div>
+            <button class="btn-secondary" id="btn-re-generate">⚙️ Recalibrate Metrics</button>
+          </div>
+          
+          <div class="dashboard-summary-widgets">
+            <div class="widget-card">
+              <div class="widget-val text-gradient" id="target-calories">2,750 kcal</div>
+              <div class="widget-label">Target Calories</div>
+            </div>
+            <div class="widget-card">
+              <div class="widget-val" id="target-protein" style="color:var(--primary);">114g</div>
+              <div class="widget-label">Protein Target</div>
+            </div>
+            <div class="widget-card">
+              <div class="widget-val" id="target-carbs" style="color:var(--secondary);">368g</div>
+              <div class="widget-label">Carbohydrate Target</div>
+            </div>
+            <div class="widget-card">
+              <div class="widget-val" id="target-fats" style="color:var(--accent);">91g</div>
+              <div class="widget-label">Fat Target</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Main Content Dashboard Columns -->
+        <div class="dashboard-grid">
+          
+          <!-- Column 1: Primary Training Schedule Calendar and Meals Planner -->
+          <div class="main-column">
+            
+            <div class="glass-card" style="padding:24px;">
+              <div class="calendar-nav">
+                <h3 style="font-size:1.4rem;">📅 7-Day Progressive Architecture</h3>
+                <span style="font-size:0.85rem; color:var(--text-muted);">Select Day to load plan:</span>
+              </div>
+              
+              <!-- 7 Day Selector row -->
+              <div class="day-bubble-row" id="day-bubble-row">
+                <!-- Day buttons populated in JS -->
+              </div>
+              
+              <!-- Sub Tab System (Workout vs Diet) -->
+              <div class="day-tab-container">
+                <div class="day-tabs">
+                  <button class="day-tab-btn active" id="planner-tab-workout">🏋️ Workout Program</button>
+                  <button class="day-tab-btn" id="planner-tab-diet">🥗 Nutrition & Diet Plan</button>
+                </div>
+                
+                <!-- WORKOUT CONTENT CONTAINER -->
+                <div id="workout-content-wrapper" style="animation: fadeIn 0.3s ease;">
+                  <div style="background:rgba(255, 255, 255, 0.02); border:1px solid var(--border-light); padding:16px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:0.9rem;">
+                    <span id="day-focus-label">Day Focus Label</span>
+                  </div>
+                  
+                  <div class="exercise-list" id="exercise-list-container">
+                    <!-- Exercise cards populated in JS -->
+                  </div>
+                </div>
+                
+                <!-- DIET CONTENT CONTAINER -->
+                <div id="diet-content-wrapper" style="display:none; animation: fadeIn 0.3s ease;">
+                  <div style="background:rgba(16, 185, 129, 0.05); border:1px solid rgba(16, 185, 129, 0.2); padding:16px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:0.85rem; color:var(--text-main);">
+                    <strong>💡 Hypertrophy Bio-Availability Tip:</strong> Ensure complex grains (Roti, Daliya, Rice) are combined in the same meal with your legume sources (Kala Chana, Mung Daal) to compile complete amino acid profiles that stimulate high protein synthesis!
+                  </div>
+                  
+                  <div class="meal-list" id="meal-list-container">
+                    <!-- Meal cards populated in JS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Column 2: Side Column holding Water fluid tracker & custom Macro slider adjustments -->
+          <div class="side-column">
+            
+            <!-- HYDRATION WAVE COMPONENT -->
+            <div class="glass-card water-tracker-card">
+              <h3 style="font-size:1.25rem; margin-bottom:6px;">💧 Muscle Volumization</h3>
+              <p style="color:var(--text-muted); font-size:0.8rem; margin-bottom:20px; text-align:center;">Muscle tissue is 75% water. Fully hydrated cells speed muscle protein synthesis.</p>
+              
+              <!-- Wave Liquid Bubble -->
+              <div class="liquid-bubble">
+                <div class="liquid-wave" id="water-wave" style="height:0%;"></div>
+                <div class="liquid-percentage" id="water-percentage-label">0%</div>
+              </div>
+              
+              <p id="water-tracker-sub" style="font-family:'Courier New', monospace; font-size:0.85rem; color:var(--primary); font-weight:700; margin-bottom:20px;">Logged: 0L / 4.00L</p>
+              
+              <div class="water-actions">
+                <button class="water-btn" id="btn-add-water-250">+250ml</button>
+                <button class="water-btn" id="btn-add-water-500">+500ml</button>
+                <button class="water-btn" id="btn-reset-water" style="color:var(--accent);">Reset</button>
+              </div>
+            </div>
+            
+            <!-- DYNAMIC MACRO SURPLUS ADJUSTER -->
+            <div class="glass-card macro-adjuster-card">
+              <h3 style="font-size:1.25rem; margin-bottom:6px;">⚙️ Caloric Surplus Adjuster</h3>
+              <p style="color:var(--text-muted); font-size:0.8rem; margin-bottom:20px;">Ectomorphs burn calories quickly. Fine-tune your surplus depending on weekly weight changes.</p>
+              
+              <!-- Slider Input -->
+              <div class="range-slider-group">
+                <div class="slider-label-row">
+                  <span>Hypertrophy Surplus Target</span>
+                  <span class="slider-val text-gradient" id="surplus-val">+500 kcal</span>
+                </div>
+                <input type="range" id="surplus-slider" class="modern-range" min="200" max="1000" step="50" value="500">
+              </div>
+              
+              <!-- Live Calorie outputs widgets -->
+              <div style="display:flex; justify-content:space-between; border-top:1px solid var(--border-light); padding-top:16px; font-size:0.85rem; color:var(--text-muted);">
+                <div>Maintenance TDEE: <strong id="macro-tdee-val" style="color:var(--text-main);">2250 kcal</strong></div>
+                <div>Surplus Added: <strong id="macro-surplus-val" style="color:var(--secondary);">+500 kcal</strong></div>
+              </div>
+              
+              <!-- Live Macro breakdown Fillbars -->
+              <div class="macro-breakdown-bars">
+                
+                <div class="macro-bar-item">
+                  <div class="macro-bar-label">
+                    <span>Protein (High Tension Recovery)</span>
+                    <span id="adjust-protein-text">114g (16%)</span>
+                  </div>
+                  <div class="macro-bar-track">
+                    <div class="macro-bar-fill protein" id="adjust-protein-fill" style="width: 16%;"></div>
+                  </div>
+                </div>
+                
+                <div class="macro-bar-item">
+                  <div class="macro-bar-label">
+                    <span>Healthy Fats (Hormones & Density)</span>
+                    <span id="adjust-fat-text">91g (30%)</span>
+                  </div>
+                  <div class="macro-bar-track">
+                    <div class="macro-bar-fill fat" id="adjust-fat-fill" style="width: 30%;"></div>
+                  </div>
+                </div>
+                
+                <div class="macro-bar-item">
+                  <div class="macro-bar-label">
+                    <span>Carbohydrates (Muscle Sparing)</span>
+                    <span id="adjust-carb-text">368g (54%)</span>
+                  </div>
+                  <div class="macro-bar-track">
+                    <div class="macro-bar-fill carb" id="adjust-carb-fill" style="width: 54%;"></div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: AI ADVISOR CHATBOT
+         ========================================================================== -->
+    <section id="tab-advisor" class="content-section">
+      <div class="wizard-header" style="margin-bottom:30px;">
+        <h2>💬 AuraPulse <span class="text-gradient">AI Fitness Advisor</span></h2>
+        <p>Real-time scientific solutions to your training, dietary, and gut absorption queries.</p>
+      </div>
+      
+      <div class="advisor-wrapper glass-card" style="border-radius: var(--radius-lg);">
+        
+        <!-- Sidebar recommended queries suggestions -->
+        <aside class="advisor-sidebar">
+          <span class="sidebar-title">Popular Ectomorph Queries</span>
+          <button class="qa-suggest-btn">"How do I prepare Soya Chunks to avoid gas?"</button>
+          <button class="qa-suggest-btn">"When is the best time to take Gond Katira?"</button>
+          <button class="qa-suggest-btn">"Why should I rest 2-3 minutes instead of 30 seconds?"</button>
+          <button class="qa-suggest-btn">"How do I combine plant proteins for muscle growth?"</button>
+          <button class="qa-suggest-btn">"Why is Ghee important for hardgainers?"</button>
+        </aside>
+        
+        <!-- Main Chat Panel console -->
+        <div class="chat-console">
+          
+          <div class="chat-header">
+            <div class="bot-avatar">🤖</div>
+            <div class="bot-info">
+              <strong style="font-size:0.95rem; font-family:'Outfit';">AuraPulse NLP Consultant</strong>
+              <span class="bot-status">🟢 Online | Bio-Mechanics Expert</span>
+            </div>
+          </div>
+          
+          <!-- Chat Thread container -->
+          <div class="chat-messages" id="chat-messages-container">
+            <div class="chat-bubble bot">
+              👋 **Hello! I am your AuraPulse Sports Science Advisor.**
+              <br><br>
+              As a hardgainer ectomorph, minor training and dietary adjustments dictate your transformation speed. 
+              <br><br>
+              Ask me *anything* about preparing soya chunks, optimizing Gond Katira, why circuits decrease hypertrophy, or how to pair complete proteins!
+            </div>
+          </div>
+          
+          <!-- Input field bar -->
+          <div class="chat-input-bar">
+            <input type="text" id="chat-user-input" placeholder="Type your diet, workout, or digestion query here..." autocomplete="off">
+            <button class="chat-send-btn" id="chat-send-btn">➜</button>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: MONETIZATION & PREMIUM
+         ========================================================================== -->
+    <section id="tab-earning" class="content-section">
+      <div class="wizard-header" style="margin-bottom:30px;">
+        <h2>💎 AuraPulse <span class="text-gradient">Earning & Premium Portal</span></h2>
+        <p>Unlock custom fitness capabilities while exploring commercial platform monetization routes.</p>
+      </div>
+      
+      <div class="monetization-grid">
+        
+        <!-- Main Column: custom printable reports & elite high-ticket coach intake -->
+        <div class="main-column">
+          
+          <!-- PDF Report card -->
+          <div class="glass-card" style="padding:30px; margin-bottom:30px; border-left: 4px solid var(--secondary);">
+            <h3 style="font-size:1.4rem; margin-bottom:8px;">🖨️ Export Custom Transformation Report</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;">
+              Download your dynamically generated 7-Day Workout & Diet Plan. This report is fully optimized for print-out and contains precise macro profiles, instructions, and rest timers.
+            </p>
+            <button class="btn-primary" id="btn-export-pdf" style="background:var(--gradient-primary); box-shadow:var(--shadow-glow-green);">
+              Save Full Plan As PDF
+            </button>
+          </div>
+          
+          <!-- Paid 1-on-1 Coaching Inquiry form -->
+          <div class="glass-card coaching-card" id="coaching-form-container">
+            <span class="affiliate-badge" style="background:rgba(245, 158, 11, 0.15); border-color:var(--accent); color:var(--accent); margin-bottom:12px;">Premium Upgrade</span>
+            <h3 style="font-size:1.6rem; font-family:'Outfit';">🏆 Intake: Custom Elite 1-on-1 Hypertrophy Coaching</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; margin-top:6px;">
+              Ready to accelerate your natural transformation? Apply for a paid high-ticket 1-on-1 premium coaching package. Includes custom video form checks, bloodwork reviews, and absolute accountability.
+            </p>
+            
+            <form class="coaching-form" id="coaching-application-form">
+              <div class="input-grid" style="margin-bottom:10px;">
+                <div class="input-group">
+                  <label for="coach-name">Your Full Name</label>
+                  <input type="text" id="coach-name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                  <label for="coach-email">Your Email Address</label>
+                  <input type="email" id="coach-email" placeholder="Enter your email" required>
+                </div>
+              </div>
+              
+              <div class="input-group" style="margin-bottom:10px;">
+                <label for="coach-experience">What is your primary roadblock?</label>
+                <select id="coach-experience">
+                  <option value="diet">Eating enough food / Appetite limits</option>
+                  <option value="workout">Struggling with progression / Stuck at a weight plateau</option>
+                  <option value="time">Consistency / Busy lifestyle</option>
+                  <option value="gut">Digestive bloating / Gut intolerance issues</option>
+                </select>
+              </div>
+              
+              <button type="submit" class="btn-primary" style="align-self:flex-start; margin-top:10px; background:linear-gradient(135deg, #f59e0b, #6366f1); box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);">
+                Submit Application For Review
+              </button>
+            </form>
+          </div>
+          
+        </div>
+        
+        <!-- Sidebar Column: Affiliate equipment/supplements revenue showcase -->
+        <div class="affiliate-sidebar">
+          
+          <div class="glass-card" style="padding:24px; text-align:center;">
+            <h4 style="font-size:1.15rem; margin-bottom:8px;">💰 Platform Monetization</h4>
+            <p style="color:var(--text-muted); font-size:0.8rem; line-height:1.4;">
+              AuraPulse operates as a highly lucrative commercial platform by routing users to premium coaching packages and integrating top-tier affiliate equipment and supplements.
+            </p>
+          </div>
+          
+          <!-- Affiliate Card 1: Whey Protein alternative / Pea Protein -->
+          <div class="glass-card affiliate-card">
+            <span class="affiliate-badge">Recommended Accessory</span>
+            <h4 style="font-size:1rem; font-family:'Outfit';">Premium Organic Pea & Brown Rice Protein</h4>
+            <p style="color:var(--text-muted); font-size:0.78rem;">
+              Complete vegan protein powder (25g per scoop) to boost daily intake. Ideal blend for clean, dairy-free ectomorph gains.
+            </p>
+            <div class="affiliate-img-placeholder">
+              📦 Complete Amino Pea Protein Blend<br>(Affiliate Product Placeholder)
+            </div>
+            <div class="affiliate-price-row">
+              <span class="affiliate-price">$44.99</span>
+              <button class="affiliate-buy-btn">Get Discount ➜</button>
+            </div>
+          </div>
+          
+          <!-- Affiliate Card 2: Calisthenics bands -->
+          <div class="glass-card affiliate-card">
+            <span class="affiliate-badge">Recommended Gear</span>
+            <h4 style="font-size:1rem; font-family:'Outfit';">Elite Calisthenics Resistance Bands Set</h4>
+            <p style="color:var(--text-muted); font-size:0.78rem;">
+              Heavy-duty continuous loop bands to assist negative pullups, overload pushups, and add split-squat mechanical load.
+            </p>
+            <div class="affiliate-img-placeholder">
+              🎗️ High-Tension Loop Band Kit<br>(Affiliate Product Placeholder)
+            </div>
+            <div class="affiliate-price-row">
+              <span class="affiliate-price">$24.95</span>
+              <button class="affiliate-buy-btn">Buy Now ➜</button>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+</body>
+</html>
