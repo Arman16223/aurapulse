@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arman16223.github.io/aurapulse/sitemap.xml
